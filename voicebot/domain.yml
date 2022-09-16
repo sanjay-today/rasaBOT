@@ -1,0 +1,92 @@
+version: "3.1"
+
+actions:
+- action_registration
+- utter_chitchat
+- utter_ask
+- utter_bye
+- utter_welcome
+- utter_happy
+- utter_iamabot
+- utter_respond
+- utter_name
+- utter_registration
+- utter_email
+- utter_phone
+- utter_anything_else
+
+
+forms:
+  form_info:
+    required_slots:
+        - name
+        - registration
+        - phone
+        - email
+        
+
+intents:
+- greet
+- welcome
+- chitchat
+- ask
+- respond
+- affirm
+- name
+- registration
+- email
+- phone
+- bye
+- deny
+- anything_else
+- bot_challenge
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_text
+     
+  phone:
+    type: any
+    mappings:
+    - type: from_text
+
+  registration:
+    type: any
+    mappings:
+    - type: from_text
+
+
+  email:
+    type: any
+    mappings:
+    - type: from_text
+  
+  
+responses:
+  utter_welcome:
+  - text: "Hello! I am a bot. I am here to help you."
+  utter_name:
+  - text: "Please provide your name."
+  utter_phone:
+  - text: "Please provide your phone number."
+  utter_registration:
+  - text: "Please provide your registration number."
+  utter_email:
+  - text: "Please provide your email address."
+  utter_respond:
+  - text: "Nice to meet you {name} "
+  utter_chitchat:
+  - text: "I'm not designed for this."
+  utter_ask:
+  - text: "Is the provided information correct?"
+  utter_bye:
+  - text: "Thank you for providing information"
+  utter_happy:
+  - text: "Great, carry on!"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  utter_anything_else:
+    - text: "Is there anything else I can help you with?"
+

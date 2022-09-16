@@ -1,0 +1,146 @@
+version: "3.1"
+nlu:
+
+- intent: greet
+  examples: |
+    - Hey
+    - Hello
+    - Hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - good afternoon
+
+- intent: welcome
+  examples: |
+    - welcome
+    - greetings
+
+- intent: bye
+  examples: |
+    - bye
+    - goodbye
+    - cee you later
+    - goodnight
+    - Bye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Thank you so much!
+    - thanks
+    - tnx
+    - thank you so much
+    - thanks alot
+    - ty
+
+- intent: name
+  examples: |
+    - my name is sanjay yadav
+    - i'm sanjay yadav
+    - sanjay yadav
+    - ashish 
+    - rahul sharma
+
+- regex: registration
+  examples: |
+    - ^[A-Z]{2}-[0-9]{1,2}-[A-Z]{1,2}-[0-9]{3,4}$
+- intent: registration
+  examples: |
+    - My registration number is [TN-75-AT-7106](registration)
+    - AP21BP7331(registration)
+    - UP 19 DW 7343(registration)
+    - MH-12-RN-1289(registration)
+    - HR26TC7174(registration)
+    - MP 01 BI 1011(registration)
+    - UP-01-HL-1571(registration)
+    - AP01-DR-7912(registration)
+    - KA-01-SE-4961(registration)
+    - GU 01 LM 8221(registration)
+    - JK01HL1232(registration)
+    - tn75 at 7106(registration)
+    - AP-21-BP-7331(registration)
+    - UP 19DE 3437(registration)
+    - MH 12 RN 1289(registration)
+    - HR-26-TC-1747(registration)
+    - MP 01 BI 7555(registration)
+    - up01 HP 2998(registration)
+    - AP-01-DR3665(registration)
+    - KA 01 SE 5846(registration)
+    - GU 01 LM 4546(registration)
+    - JK-01-HL-1232(registration)
+
+- regex: email
+  examples: |
+    - ^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$
+- intent: email
+  examples: |
+    - My email id is @gmail.com(email)
+    - sanjay @gmail.com(email)
+    - sanjay yadav@gmail.com(email)
+    - parthsharma@gmail.com(email)
+    - bineetsingh@gmail.com(email)
+    - rahulgupta@gmail.com(email)
+    - bk112@gmail.com(email)
+    - sanjayyadav12@gmail.com(email)
+    - parthsharma@gmail.com(email)
+    - bineetsingh@gmail.com(email)
+    - rahul gupta@gmail.com(email)
+    - ravi@gmail.com(email)
+    - rishabhyyadav@gmail.com(email)
+    - parthsharma@gmail.com(email)
+    - bineetsingh@gmail.com(email)
+    - rahulgupta@gmail.com(email)
+
+- regex: phone
+  examples: |
+    - ^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$
+- intent: phone
+  examples: |
+    - 91-8597538997(phone)
+    - 91-8889639631(phone)
+    - 91 5486529784(phone)
+    - 915848748787(phone)
+    - 917749638415(phone)
+    - 918223684844(phone)
+    - 91-6899977545(phone)
+    - 915848748787(phone)
+    - 91 7749638415(phone)
+    - 91 8223684844(phone)
+    - 916899977545(phone)
+    - 915848748787(phone)
+    - 917749638415(phone)
+    - 91 8223684844(phone)
+    - 916899977545(phone)
+
+- intent: affirm
+  examples: |
+    - yes
+    - YES
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - It's correct
+    - right
+    - It's right
+    - yup
+- intent: deny
+  examples: |
+    - no
+    - no thank you
+    - no thanks
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - It's not
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
